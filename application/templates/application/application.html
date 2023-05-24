@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Заявка на поступление</title>
+  <style>
+    /* form {
+      margin-left: 32%;
+      width: 500px;
+      margin-top: 50px;
+    } */
+  </style>
+</head>
+<body>
+  <h1>Заявка на поступление в школу</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.student_name }}<br>
+    {{ form.student_date }}<br>
+    {{ form.family_name }}<br>
+    {{ form.contact_phone_number }}<br>
+    {{ form.email }}<br>
+    {{ form.adress }}<br>
+    <span>{{ error }}</span>
+    <input type="submit" value="Отправить заявку">
+  </form>
+</body>
+</html>
